@@ -2,7 +2,7 @@ class TherionAT541 < Formula
   desc "Processes survey data and generates maps or 3D models of caves"
   homepage "https://therion.speleo.sk"
   url "https://therion.speleo.sk/downloads/therion-5.4.1.tar.gz"
-  sha256 "6e4b88d1803bdf252cf7d4632afcd9c4005e387245e9ac95774e6cc894ae4ccd"
+  sha256 "f1b8552e977cdbb5837703e9cadaa4694bfd997c2bd1358b5b21ef87837fda05"
   revision 1
 
   depends_on "freetype"
