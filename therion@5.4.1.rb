@@ -13,7 +13,8 @@ class TherionAT541 < Formula
   depends_on "tcl-tk" if MacOS.version >= :sierra
 
   def install
-	  inreplace "Makefile", "all: version outdirs $(OUTDIR)/therion doc "
+    inreplace "Makefile", "all: version outdirs $(OUTDIR)/therion doc ",
+                          "all: version outdirs $(OUTDIR)/therion "
 
     inreplace "makeinstall.tcl" do |s|
       s.gsub! "/usr/bin", bin
