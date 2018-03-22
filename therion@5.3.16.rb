@@ -24,6 +24,7 @@ class TherionAT5316 < Formula
 
     etc.mkpath
     bin.mkpath
+	("loch.app/Contents/MacOS").mkpath
 
     system "make", OS.mac? ? "config-macosx" : "config-linux"
     system "make"
