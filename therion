@@ -3,7 +3,7 @@ class Therion < Formula
   homepage "https://therion.speleo.sk"
   url "https://github.com/therion/therion.git",
     :tag => "unicorn-1",
-    :revision => "eefc6ed865ca20447afc293c986676933dbfb137"
+    :revision => "0133c2ec73c76d37861789c9c0bee84c24c6e166"
 
   depends_on "freetype"
   depends_on "imagemagick"
