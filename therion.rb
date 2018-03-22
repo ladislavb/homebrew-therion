@@ -5,6 +5,7 @@ class Therion < Formula
     :using => :git, 
     :tag => 'master',
     :revision => "0133c2ec73c76d37861789c9c0bee84c24c6e166"
+	version '5.4.x'
 
   depends_on "freetype"
   depends_on "imagemagick"
