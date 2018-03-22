@@ -2,6 +2,8 @@ class Therion < Formula
   desc "Processes survey data and generates maps or 3D models of caves"
   homepage "https://therion.speleo.sk"
   url "https://github.com/therion/therion.git",
+    :using => :git, 
+    :tag => 'master',
     :revision => "0133c2ec73c76d37861789c9c0bee84c24c6e166"
 
   depends_on "freetype"
