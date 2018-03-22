@@ -22,7 +22,13 @@ Test it:
 
 `brew tap caskroom/cask`
 
-### 4. Install Therion
+### 4. Install MacTex
+
+`brew cask install mactex`
+
+This will take some time...
+
+### 5. Install Therion
 
 To install the latest **tested** revision use:
 
