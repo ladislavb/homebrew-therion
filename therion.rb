@@ -14,6 +14,7 @@ class Therion < Formula
   depends_on "vtk"
   depends_on "wxmac"
   depends_on "tcl-tk" if MacOS.version >= :sierra
+  depends_on cask: "mactex"
 
   def install
     system "make", "config-macosx"
