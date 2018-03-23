@@ -30,7 +30,7 @@ If you want to disable brew analytics type:
 
 ### 4. Install XQuartz
 
-If you macOS doesn't contain X11 server (10.12 Sierra+) install it by following command:
+If your macOS doesn't contain X11 server (10.12 Sierra+) install it by following command:
 
 `brew cask install xquartz`
 
@@ -65,3 +65,7 @@ After sucessfull installation you should be able to:
 ## Upgrade
 
 Launch Terminal app and type `brew update`
+
+## Uninstall
+
+Launch Terminal app and type `brew uninstall therion`
