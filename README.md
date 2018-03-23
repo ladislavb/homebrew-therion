@@ -17,6 +17,7 @@ This repository is hosting homebrew formualae for easy installation and update o
 Test it:
 
 `brew update`
+
 `brew doctor`
 
 If you want to disable brew analytics type:
