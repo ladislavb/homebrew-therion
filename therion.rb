@@ -16,8 +16,17 @@ class Therion < Formula
   depends_on "tcl-tk" if MacOS.version >= :sierra
 
   def install
-    etc.mkpath
+
+	inreplace "makeinstall.tcl" do |s|
+      s.gsub! "/usr/local/bin", bin
+      s.gsub! "/usr/local/etc", etc
+      s.gsub! "/Applications", prefix
+    end
+	
+	etc.mkpath
     bin.mkpath
+	
+	ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin"
 	
 	system "make", "config-macosx"
     system "make"

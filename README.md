@@ -19,13 +19,25 @@ Test it:
 `brew update`
 `brew doctor`
 
+If you want to disable brew analytics type:
+
+`brew analytics off`
+
+### 3. Homebrew-Cask
+
+`brew tap caskroom/cask`
+
+### 4. Install XQuartz
+
+If you macOS doesn't contain X11 server (10.12 Sierra+) install it by following command:
+
+`brew cask install xquartz`
+
 ### 3. Install MacTeX
 
-Download and install MacTeX from http://www.tug.org/mactex/mactex-download.html
+`brew cask install mactex`
 
 ### 4. Install Therion
-
-Open new Terminal window and type:
 
 `brew install https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
 
@@ -35,6 +47,12 @@ If you want to install the latest - bleeding edge version use:
 
 `brew install --HEAD https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
 
+## 5. Linking Loch to /Applications
+
+To create symbolic link for loch.app to Applications folder run:
+
+`brew linkapps`
+
 ## Running apps
 
 After sucessfull installation you should be able to:
@@ -42,7 +60,6 @@ After sucessfull installation you should be able to:
 - start XTherion by typing `xtherion` command to Terminal window
 - run Therion compiler by typing `therion` command to Terminal window
 - launch Loch viewer from Launchpad
-
 
 ## Upgrade
 
