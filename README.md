@@ -16,27 +16,33 @@ This repository is hosting homebrew formualae for easy installation and update o
 
 Test it:
 
+`brew update`
 `brew doctor`
 
-### 3. Get Homebrew-Cask
+### 3. Install MacTeX
 
-`brew tap caskroom/cask`
+Download and install MacTeX from http://www.tug.org/mactex/mactex-download.html
 
-### 4. Install MacTex
+### 4. Install Therion
 
-`brew cask install mactex`
-
-This will take some time...
-
-### 5. Install Therion
-
-To install the latest **tested** revision use:
+Open new Terminal window and type:
 
 `brew install https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
+
+Homebrew will install the latest **tested** revision from GitHub.
 
 If you want to install the latest - bleeding edge version use:
 
 `brew install --HEAD https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
+
+## Running apps
+
+After sucessfull installation you should be able to:
+
+- start XTherion by typing `xtherion` command to Terminal window
+- run Therion compiler by typing `therion` command to Terminal window
+- launch Loch viewer from Launchpad
+
 
 ## Upgrade
 

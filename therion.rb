@@ -3,8 +3,8 @@ class Therion < Formula
   desc "Processes survey data and generates maps or 3D models of caves"
   revision 1
   
-  url "https://github.com/therion/therion.git", :revision => "0133c2e"
-  version "5.4.1+0133c2e"
+  url "https://github.com/therion/therion.git", :revision => "3ec70c6"
+  version "5.4.1+3ec70c6"
   
   head "https://github.com/therion/therion.git"
   
@@ -16,7 +16,10 @@ class Therion < Formula
   depends_on "tcl-tk" if MacOS.version >= :sierra
 
   def install
-    system "make", "config-macosx"
+    etc.mkpath
+    bin.mkpath
+	
+	system "make", "config-macosx"
     system "make"
     system "make", "install"
   end
