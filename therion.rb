@@ -2,10 +2,10 @@ class Therion < Formula
   homepage "https://therion.speleo.sk"
   desc "Processes survey data and generates maps or 3D models of caves"
   revision 1
-  
+
   url "https://github.com/therion/therion.git", :revision => "3ec70c6"
   version "5.4.1+3ec70c6"
-  
+
   head "https://github.com/therion/therion.git"
   
   depends_on "freetype"
@@ -16,19 +16,18 @@ class Therion < Formula
   depends_on "tcl-tk" if MacOS.version >= :sierra
 
   def install
-
-	inreplace "makeinstall.tcl" do |s|
+    inreplace "makeinstall.tcl" do |s|
       s.gsub! "/usr/local/bin", bin
       s.gsub! "/usr/local/etc", etc
       s.gsub! "/Applications", prefix
     end
-	
-	etc.mkpath
+
+    etc.mkpath
     bin.mkpath
-	
-	ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin"
-	
-	system "make", "config-macosx"
+
+    ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin"
+
+    system "make", "config-macosx"
     system "make"
     system "make", "install"
   end
