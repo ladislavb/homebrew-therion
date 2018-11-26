@@ -25,7 +25,7 @@ class Therion < Formula
     etc.mkpath
     bin.mkpath
 
-    ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin"
+    ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/bin"
 
     system "make", "config-macosx"
     system "make"
