@@ -24,21 +24,17 @@ If you want to disable brew analytics type:
 
 `brew analytics off`
 
-### 3. Homebrew-Cask
-
-`brew tap caskroom/cask`
-
-### 4. Install XQuartz
+### 3. Install XQuartz
 
 If your macOS doesn't contain X11 server (10.12 Sierra+) install it by following command:
 
 `brew cask install xquartz`
 
-### 3. Install MacTeX
+### 4. Install MacTeX
 
 `brew cask install mactex`
 
-### 4. Install Therion
+### 5. Install Therion
 
 `brew install https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
 
@@ -48,7 +44,7 @@ If you want to install the latest - bleeding edge version use:
 
 `brew install --HEAD https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
 
-## 5. Linking Loch to /Applications
+### 6. Linking Loch to /Applications
 
 To create symbolic link for loch.app to Applications folder run:
 
