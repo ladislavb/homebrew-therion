@@ -8,6 +8,8 @@ class Therion < Formula
 
   head "https://github.com/therion/therion.git"
   
+  depends_on "pkg-config"
+  depends_on "proj"
   depends_on "freetype"
   depends_on "imagemagick"
   depends_on "lcdf-typetools"
