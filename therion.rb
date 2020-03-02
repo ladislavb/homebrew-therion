@@ -15,7 +15,7 @@ class Therion < Formula
   depends_on "lcdf-typetools"
   depends_on "vtk"
   depends_on "wxmac"
-  depends_on "tcl-tk" if MacOS.version >= :sierra
+  #depends_on "tcl-tk" if MacOS.version >= :sierra
 
   def install
     inreplace "makeinstall.tcl" do |s|
@@ -27,8 +27,9 @@ class Therion < Formula
     etc.mkpath
     bin.mkpath
 
-    ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/opt/tcl-tk/bin:/usr/local/bin"
-    ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/opt/proj/lib/pkgconfig"
+    #ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/opt/tcl-tk/bin:/usr/local/bin"
+    ENV.prepend_path "PATH", "/Library/TeX/texbin"
+    #ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/opt/proj/lib/pkgconfig"
     
     system "make", "config-macosx"
     system "make"
