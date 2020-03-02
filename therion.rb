@@ -3,8 +3,8 @@ class Therion < Formula
   desc "Processes survey data and generates maps or 3D models of caves"
   revision 1
 
-  url "https://github.com/therion/therion.git", :revision => "3ec70c6"
-  version "5.4.1+3ec70c6"
+  url "https://github.com/therion/therion.git", :revision => "8b062cb"
+  version "5.4.4+8b062cb"
 
   head "https://github.com/therion/therion.git"
   
