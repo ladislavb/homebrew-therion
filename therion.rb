@@ -25,7 +25,8 @@ class Therion < Formula
     inreplace "makeinstall.tcl" do |s|
       s.gsub! "/usr/local/bin", bin
       s.gsub! "/usr/local/etc", etc
-      s.gsub! "/Applications", prefix
+      #brew linkapps no longer supported, so allow therion to install Loch to /Applications
+      #s.gsub! "/Applications", prefix
     end
 
     etc.mkpath
