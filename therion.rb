@@ -15,7 +15,11 @@ class Therion < Formula
   depends_on "lcdf-typetools"
   depends_on "vtk"
   depends_on "wxmac"
-  #depends_on "tcl-tk" if MacOS.version >= :sierra
+  depends_on "ghostscript"
+  depends_on "libpng"
+  depends_on "zlib"
+  depends_on "libjpeg"
+  depends_on "tcl-tk"
 
   def install
     inreplace "makeinstall.tcl" do |s|
