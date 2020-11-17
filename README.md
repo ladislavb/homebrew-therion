@@ -36,19 +36,21 @@ If your macOS doesn't contain X11 server (10.12 Sierra+) install it by following
 
 ### 5. Install Therion
 
-`brew install https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
+`brew tap ladislavb/homebrew-therion`
 
-Homebrew will install the latest **tested** revision from GitHub - currently **8b062cb**. I will try to follow therion development and update formulae regulary. 
+`brew install therion`
+
+Homebrew will install the latest **tested** revision from GitHub - currently **99e0f08**. I will try to follow therion development and update formulae regulary. 
 
 If you want to install the latest - bleeding edge version use:
 
-`brew install --HEAD https://raw.githubusercontent.com/ladislavb/homebrew-therion/master/therion.rb`
+`brew install --HEAD therion`
 
-### 6. Linking Loch to /Applications
+### 6. Copying Loch to /Applications
 
-To create symbolic link for loch.app to Applications folder run:
+Loch is installed to `/usr/local/opt/therion/loch.app/` If you have an older version of Loch installed in your Applications, remove it, then copy the new version with:
 
-`brew linkapps`
+`cp -R /usr/local/opt/therion/loch.app /Applications/`
 
 ## Running apps
 
