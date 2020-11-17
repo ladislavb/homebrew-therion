@@ -41,7 +41,9 @@ class Therion < Formula
     system "make", "install", "PREFIX=#{prefix}"
   end
 
-  caveats "Loch app is found in #{prefix} Copy #{prefix}/loch.app/ to your /Applications folder if desired"
+  def caveats 
+    "Loch app is found in #{prefix} Copy #{prefix}/loch.app/ to your /Applications folder if desired"
+  end
 
   test do
     system "#{bin}/therion", "--version"
