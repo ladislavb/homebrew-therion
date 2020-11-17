@@ -34,7 +34,8 @@ class Therion < Formula
     #ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/opt/tcl-tk/bin:/usr/local/bin"
     ENV.prepend_path "PATH", "/Library/TeX/texbin"
     #ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/opt/proj/lib/pkgconfig"
-    
+
+    ENV.deparallelize
     system "make", "clean"
     system "make", "config-macosx"
     system "make"
