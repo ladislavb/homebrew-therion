@@ -22,14 +22,14 @@ class Therion < Formula
   depends_on "tcl-tk"
 
   def install
-  #  inreplace "makeinstall.tcl" do |s|
-  #    s.gsub! "/usr/local/bin", bin
-  #    s.gsub! "/usr/local/etc", etc
-  #    s.gsub! "/Applications", prefix
-  #  end
+    inreplace "makeinstall.tcl" do |s|
+      s.gsub! "/usr/local/bin", bin
+      s.gsub! "/usr/local/etc", etc
+      s.gsub! "/Applications", prefix
+    end
 
-  #  etc.mkpath
-  #  bin.mkpath
+    etc.mkpath
+    bin.mkpath
 
     #ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/opt/tcl-tk/bin:/usr/local/bin"
     ENV.prepend_path "PATH", "/Library/TeX/texbin"
