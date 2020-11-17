@@ -36,7 +36,6 @@ class Therion < Formula
     #ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/opt/proj/lib/pkgconfig"
 
     ENV.deparallelize
-    system "make", "clean"
     system "make", "config-macosx"
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
