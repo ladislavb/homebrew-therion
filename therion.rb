@@ -1,6 +1,6 @@
 class Therion < Formula
-  homepage "https://therion.speleo.sk"
   desc "Processes survey data and generates maps or 3D models of caves"
+  homepage "https://therion.speleo.sk"
   revision 1
 
   url "https://github.com/therion/therion.git", :revision => "f8a57f4"
@@ -10,17 +10,17 @@ class Therion < Formula
   
   depends_on "cmake" => :build
   depends_on "pkg-config"
-  depends_on "proj"
   depends_on "freetype"
   depends_on "imagemagick"
   depends_on "lcdf-typetools"
+  depends_on "proj"
   depends_on "vtk"
-  depends_on "wxwidgets"
   depends_on "ghostscript"
   depends_on "libpng"
-  depends_on "zlib"
-  depends_on "libjpeg"
+  depends_on "wxwidgets"
   depends_on "tcl-tk"
+  depends_on "libjpeg"
+  depends_on "zlib"
 
   def install
     inreplace "loch/CMakeLists.txt" do |s|
@@ -28,15 +28,15 @@ class Therion < Formula
     end
 
     ENV.prepend_path "PATH", "/Library/TeX/texbin"
-    
+
     mkdir "build" do
       system "cmake", "..", *std_cmake_args
       system "make", "install"
     end
   end
 
-  def caveats 
-    "Loch app was installed to #{prefix}. Copy it to your /Applications folder using the following command: cp -R #{prefix}/loch.app/ /Applications/loch.app"
+  def caveats
+    "Copy Loch.app to your /Applications folder: cp -R #{prefix}/loch.app/ /Applications/loch.app"
   end
 
   test do
