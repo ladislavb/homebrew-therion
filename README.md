@@ -6,6 +6,8 @@ This repository is hosting homebrew formulae for easier installation and update 
 
 ## Installation
 
+> :warning: This formulae is now using CMAKE instead of the legacy make build method. Installation was successfuly tested on Apple Silicon machine running macOS 12.1 Monterey.
+
 ### 1. Install Command Line Tools
 
 `xcode-select --install`
