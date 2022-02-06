@@ -28,11 +28,11 @@ If you want to disable brew analytics type:
 
 If your macOS doesn't contain X11 server (10.12 Sierra+) install it by following command:
 
-`brew cask install xquartz`
+`brew install --cask xquartz`
 
 ### 4. Install MacTeX
 
-`brew cask install mactex`
+`brew install --cask mactex`
 
 ### 5. Install Therion
 
