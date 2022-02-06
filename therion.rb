@@ -14,7 +14,7 @@ class Therion < Formula
   depends_on "imagemagick"
   depends_on "lcdf-typetools"
   depends_on "vtk"
-  depends_on "wxmac"
+  depends_on "wxwidgets"
   depends_on "ghostscript"
   depends_on "libpng"
   depends_on "zlib"
