@@ -40,7 +40,7 @@ If your macOS doesn't contain X11 server (10.12 Sierra+) install it by following
 
 `brew install therion`
 
-Homebrew will install the latest **tested** revision from GitHub - currently **99e0f08**. I will try to follow therion development and update formulae regulary. 
+Homebrew will install the latest **tested** revision from GitHub - currently **f8a57f4**. I will try to follow therion development and update formulae regularly. 
 
 If you want to install the latest - bleeding edge version use:
 
