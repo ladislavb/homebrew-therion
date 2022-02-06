@@ -36,7 +36,7 @@ class Therion < Formula
   end
 
   def caveats 
-    "Loch app is found in #{prefix} Copy #{prefix}/loch.app/ to your /Applications folder if desired: cp -R #{prefix}/loch.app/ /Applications/loch.app"
+    "Loch app was installed to #{prefix}. Copy it to your /Applications folder using the following command: cp -R #{prefix}/loch.app/ /Applications/loch.app"
   end
 
   test do
