@@ -8,6 +8,7 @@ class Therion < Formula
 
   head "https://github.com/therion/therion.git"
   
+  depends_on "cmake" => :build
   depends_on "pkg-config"
   depends_on "proj"
   depends_on "freetype"
@@ -22,23 +23,16 @@ class Therion < Formula
   depends_on "tcl-tk"
 
   def install
-    inreplace "makeinstall.tcl" do |s|
-      s.gsub! "/usr/local/bin", bin
-      s.gsub! "/usr/local/etc", etc
+    inreplace "loch/CMakeLists.txt" do |s|
       s.gsub! "/Applications", prefix
     end
 
-    etc.mkpath
-    bin.mkpath
-
-    #ENV.prepend_path "PATH", "/Library/TeX/texbin:/opt/X11/bin:/usr/local/opt/tcl-tk/bin:/usr/local/bin"
     ENV.prepend_path "PATH", "/Library/TeX/texbin"
-    #ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/opt/proj/lib/pkgconfig"
-
-    ENV.deparallelize
-    system "make", "config-macosx"
-    system "make"
-    system "make", "install", "PREFIX=#{prefix}"
+    
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make", "install"
+    end
   end
 
   def caveats 
