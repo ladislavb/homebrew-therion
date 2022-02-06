@@ -50,7 +50,7 @@ If you want to install the latest - bleeding edge version use:
 
 Loch is installed to `/usr/local/opt/therion/loch.app/` If you have an older version of Loch installed in your Applications, remove it, then copy the new version with:
 
-`cp -R /usr/local/opt/therion/loch.app /Applications/`
+`cp -R /usr/local/opt/therion/loch.app /Applications/loch.app`
 
 ## Running apps
 
