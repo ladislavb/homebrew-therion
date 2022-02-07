@@ -4,9 +4,9 @@ Therion is cave surveying software - for details see https://therion.speleo.sk
 
 This repository is hosting homebrew formulae for easier installation and update of Therion on your Mac. Please launch Terminal app and follow the instructions.
 
-## Installation
+> :warning: This formulae is now using CMAKE instead of the legacy make build method. Installation was successfuly tested on Apple Silicon machine running macOS 12.1 Monterey. Plese check [Troubleshooting](#troubleshooting) section before submitting an issue.
 
-> :warning: This formulae is now using CMAKE instead of the legacy make build method. Installation was successfuly tested on Apple Silicon machine running macOS 12.1 Monterey.
+## Installation
 
 ### 1. Install Command Line Tools
 
@@ -83,6 +83,20 @@ Solution/Workaround:
 - Add homebrew Tcl/Tk version to the first place in $PATH variable: \
 Apple Silicon: `echo 'export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc` \
 Intel: `echo 'export PATH="/usr/local/homebrew/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc`
+- Open new Terminal window and run Xtherion. It should use newer Tcl/Tk version from now on.
+
+### XTherion - can't find package BWidget
+
+You may see the following error after the previous change: 
+
+    Error in startup script: can't find package BWidget
+        while executing
+    "package require BWidget"
+        (file "/opt/homebrew/bin/xtherion" line 12786)
+
+
+Solution/Workaround:
+
 - Symlink BWidget from /System/Library/Tcl/ folder to homebrew Tcl/Tk package folder: \
 Apple Silicon: `ln -s /System/Library/Tcl/bwidget1.9.1 /opt/homebrew/opt/tcl-tk/lib/bwidget1.9.1` \
 Intel: `ln -s /System/Library/Tcl/bwidget1.9.1 /usr/local/opt/tcl-tk/lib/bwidget1.9.1`
