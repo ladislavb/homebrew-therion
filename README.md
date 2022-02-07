@@ -83,17 +83,16 @@ Solution/Workaround:
 - Add homebrew Tcl/Tk version to the first place in $PATH variable: \
 Apple Silicon: `echo 'export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc` \
 Intel: `echo 'export PATH="/usr/local/homebrew/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc`
-- Open new Terminal window and run Xtherion. It should use newer Tcl/Tk version from now on.
+- Open new Terminal window and run Xtherion. It should use newer Tcl/Tk version from now on. **You will probably need to apply also the next fix: XTherion - can't find package BWidget**.
 
 ### XTherion - can't find package BWidget
 
-You may see the following error after the previous change: 
+You may see the following error after forcing Homebrew's Tcl/Tk version instead of the one provided by Apple: 
 
     Error in startup script: can't find package BWidget
         while executing
     "package require BWidget"
         (file "/opt/homebrew/bin/xtherion" line 12786)
-
 
 Solution/Workaround:
 
@@ -101,3 +100,7 @@ Solution/Workaround:
 Apple Silicon: `ln -s /System/Library/Tcl/bwidget1.9.1 /opt/homebrew/opt/tcl-tk/lib/bwidget1.9.1` \
 Intel: `ln -s /System/Library/Tcl/bwidget1.9.1 /usr/local/opt/tcl-tk/lib/bwidget1.9.1`
 - Open new Terminal window and run Xtherion. It should work OK from now on.
+
+### Loch scene rendering on Retina / HiDPI screen
+
+- see https://github.com/therion/therion/issues/399
