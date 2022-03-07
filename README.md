@@ -72,13 +72,13 @@ Launch Terminal app and type `brew update`
 
 Launch Terminal app and type `brew uninstall therion`
 
-## Troubleshooting
+## Troubleshooting / Known issues
 
 ### XTherion UI is broken
 
 After starting XTherion from Terminal you see the following warning: `DEPRECATION WARNING: The system version of Tk is deprecated and may be removed in a future release. Please don't rely on it. Set TK_SILENCE_DEPRECATION=1 to suppress this warning.`
 
-Solution/Workaround:
+Solution / Workaround:
 
 - Add homebrew Tcl/Tk version to the first place in $PATH variable: \
 Apple Silicon: `echo 'export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc` \
@@ -94,13 +94,9 @@ You may see the following error after forcing Homebrew's Tcl/Tk version instead 
     "package require BWidget"
         (file "/opt/homebrew/bin/xtherion" line 12786)
 
-Solution/Workaround:
+Solution / Workaround:
 
 - Symlink BWidget from /System/Library/Tcl/ folder to homebrew Tcl/Tk package folder: \
 Apple Silicon: `ln -s /System/Library/Tcl/bwidget1.9.1 /opt/homebrew/opt/tcl-tk/lib/bwidget1.9.1` \
 Intel: `ln -s /System/Library/Tcl/bwidget1.9.1 /usr/local/opt/tcl-tk/lib/bwidget1.9.1`
 - Open new Terminal window and run Xtherion. It should work OK from now on.
-
-### Loch scene rendering on Retina / HiDPI screen
-
-- see https://github.com/therion/therion/issues/399
