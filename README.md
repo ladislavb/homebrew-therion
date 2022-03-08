@@ -4,7 +4,7 @@ Therion is cave surveying software - for details see https://therion.speleo.sk
 
 This repository is hosting homebrew formulae for easier installation and update of Therion on your Mac. Please launch Terminal app and follow the instructions.
 
-> :warning: This formulae is now using CMAKE instead of the legacy make build method. Installation was successfuly tested on Apple Silicon machine running macOS 12.1 Monterey. Plese check [Troubleshooting](#troubleshooting) section before submitting an issue.
+> :warning: This formulae is now using CMAKE instead of the legacy make build method. Installation was successfuly tested on Apple Silicon machine running macOS 12.1 Monterey. Plese check [Troubleshooting / Known issues](#troubleshooting--known-issues) section before submitting an issue.
 
 ## Installation
 
