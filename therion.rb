@@ -4,7 +4,7 @@ class Therion < Formula
   #url "https://github.com/therion/therion.git", revision: "75d20fd"
   url "https://github.com/therion/therion/archive/v6.1.2.tar.gz"
   sha256 "be1324b7d9888a6aeaa777870c8320e13cf60ee9e40c14b486dbce4c50160c2f"
-  version "6.0.6"
+  version "6.1.2"
   revision 3
   head "https://github.com/therion/therion.git"
 
