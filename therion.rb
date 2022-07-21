@@ -2,8 +2,8 @@ class Therion < Formula
   desc "Processes survey data and generates maps or 3D models of caves"
   homepage "https://therion.speleo.sk"
   #url "https://github.com/therion/therion.git", revision: "75d20fd"
-  url "https://github.com/therion/therion/archive/v6.0.6.tar.gz"
-  sha256 "911eca50c6e4a60cbd3e1349b04b9aea4c4daa0ca13b72426a76efc951585c24"
+  url "https://github.com/therion/therion/archive/v6.1.2.tar.gz"
+  sha256 "be1324b7d9888a6aeaa777870c8320e13cf60ee9e40c14b486dbce4c50160c2f"
   version "6.0.6"
   revision 3
   head "https://github.com/therion/therion.git"
