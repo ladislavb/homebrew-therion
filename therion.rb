@@ -8,6 +8,7 @@ class Therion < Formula
   revision 3
   head "https://github.com/therion/therion.git"
 
+  depends_on "catch2" => :build
   depends_on "cmake" => :build
   depends_on "fmt" => :build
   depends_on "freetype"
