@@ -1,5 +1,8 @@
 # homebrew-therion
 
+## Do not use this repository!
+> :warning: Therion formula has been moved to https://github.com/therion/homebrew-therion
+
 Therion is cave surveying software - for details see https://therion.speleo.sk
 
 This repository is hosting homebrew formulae for easier installation and update of Therion on your Mac.
